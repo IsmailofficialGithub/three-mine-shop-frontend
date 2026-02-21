@@ -63,6 +63,7 @@ function HomePage() {
               <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className="text-gray-300 hover:text-purple-400 transition-colors font-medium">About</a>
               <a href="#history" onClick={(e) => { e.preventDefault(); scrollToSection('history'); }} className="text-gray-300 hover:text-purple-400 transition-colors font-medium">History</a>
               <a href="#experience" onClick={(e) => { e.preventDefault(); scrollToSection('experience'); }} className="text-gray-300 hover:text-purple-400 transition-colors font-medium">Experience</a>
+              <a href="#gallery" onClick={(e) => { e.preventDefault(); scrollToSection('gallery'); }} className="text-gray-300 hover:text-purple-400 transition-colors font-medium">Gallery</a>
               <a href="#shop" onClick={(e) => { e.preventDefault(); scrollToSection('shop'); }} className="text-gray-300 hover:text-purple-400 transition-colors font-medium">Shop</a>
               <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className="text-gray-300 hover:text-purple-400 transition-colors font-medium">Contact</a>
             </div>
@@ -85,6 +86,7 @@ function HomePage() {
                     <a href="#about" onClick={() => { setMobileMenuOpen(false); scrollToSection('about'); }} className="text-lg text-gray-300 hover:text-purple-400">About</a>
                     <a href="#history" onClick={() => { setMobileMenuOpen(false); scrollToSection('history'); }} className="text-lg text-gray-300 hover:text-purple-400">History</a>
                     <a href="#experience" onClick={() => { setMobileMenuOpen(false); scrollToSection('experience'); }} className="text-lg text-gray-300 hover:text-purple-400">Experience</a>
+                    <a href="#gallery" onClick={() => { setMobileMenuOpen(false); scrollToSection('gallery'); }} className="text-lg text-gray-300 hover:text-purple-400">Gallery</a>
                     <a href="#shop" onClick={() => { setMobileMenuOpen(false); scrollToSection('shop'); }} className="text-lg text-gray-300 hover:text-purple-400">Shop</a>
                     <a href="#contact" onClick={() => { setMobileMenuOpen(false); scrollToSection('contact'); }} className="text-lg text-gray-300 hover:text-purple-400">Contact</a>
                   </div>
@@ -330,6 +332,55 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-purple-600/20 text-purple-400 border-purple-600/50">
+              <Star className="w-3 h-3 mr-1" /> Moments
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Explore The <span className="text-gradient">Experience</span>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              From epic concerts to serene camping, discover what awaits you at Thee Mine.
+            </p>
+          </div>
+
+          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+            {[
+              "Music livebanner.png",
+              "campinginforces.png",
+              "camps2.png",
+              "concertofsinger.png",
+              "image copy 10.png",
+              "image copy 11.png",
+              "image copy 12.png",
+              "image copy 8.png",
+              "image copy.png",
+              "image.png",
+              "nightcampshine.png",
+              "railwaytrack.png"
+            ].map((img, i) => (
+              <div key={i} className="break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer hover-lift">
+                <img 
+                  src={`/images/concerts/${img}`} 
+                  alt="Thee Mine Event"
+                  className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 via-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <span className="text-white font-medium text-lg block">Captured Moment</span>
+                    <span className="text-purple-300 text-sm">Thee Mine Amphitheater</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Shop Section with Video Hero */}
       <section id="shop" className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Video Background */}
@@ -479,6 +530,7 @@ function HomePage() {
                 <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className="text-gray-400 hover:text-purple-400 transition-colors">About</a></li>
                 <li><a href="#history" onClick={(e) => { e.preventDefault(); scrollToSection('history'); }} className="text-gray-400 hover:text-purple-400 transition-colors">History</a></li>
                 <li><a href="#experience" onClick={(e) => { e.preventDefault(); scrollToSection('experience'); }} className="text-gray-400 hover:text-purple-400 transition-colors">Experience</a></li>
+                <li><a href="#gallery" onClick={(e) => { e.preventDefault(); scrollToSection('gallery'); }} className="text-gray-400 hover:text-purple-400 transition-colors">Gallery</a></li>
                 <li><a href="#shop" onClick={(e) => { e.preventDefault(); scrollToSection('shop'); }} className="text-gray-400 hover:text-purple-400 transition-colors">Shop</a></li>
               </ul>
             </div>

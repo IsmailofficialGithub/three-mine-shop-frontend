@@ -222,6 +222,7 @@ function App() {
               <a href="#about" className="text-gray-300 hover:text-purple-400 transition-colors font-medium">About</a>
               <a href="#history" className="text-gray-300 hover:text-purple-400 transition-colors font-medium">History</a>
               <a href="#experience" className="text-gray-300 hover:text-purple-400 transition-colors font-medium">Experience</a>
+              <a href="#gallery" className="text-gray-300 hover:text-purple-400 transition-colors font-medium">Gallery</a>
               <button onClick={() => navigateTo('shop')} className="text-gray-300 hover:text-purple-400 transition-colors font-medium">Shop</button>
               <a href="#contact" className="text-gray-300 hover:text-purple-400 transition-colors font-medium">Contact</a>
             </div>
@@ -239,6 +240,7 @@ function App() {
                     <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-lg text-gray-300 hover:text-purple-400">About</a>
                     <a href="#history" onClick={() => setMobileMenuOpen(false)} className="text-lg text-gray-300 hover:text-purple-400">History</a>
                     <a href="#experience" onClick={() => setMobileMenuOpen(false)} className="text-lg text-gray-300 hover:text-purple-400">Experience</a>
+                    <a href="#gallery" onClick={() => setMobileMenuOpen(false)} className="text-lg text-gray-300 hover:text-purple-400">Gallery</a>
                     <button onClick={() => { setMobileMenuOpen(false); navigateTo('shop'); }} className="text-lg text-gray-300 hover:text-purple-400 text-left">Shop</button>
                     <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-lg text-gray-300 hover:text-purple-400">Contact</a>
                   </div>
@@ -285,43 +287,48 @@ function App() {
         </div>
       </section>
 
-      {/* Product Gallery */}
-      <section className="py-24 bg-background">
+      {/* Gallery Section */}
+      <section id="gallery" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-purple-600/20 text-purple-400 border-purple-600/50">
-              Gallery
+              Moments
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Capture the <span className="text-gradient">Vibe</span>
+              Explore The <span className="text-gradient">Experience</span>
             </h2>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              From epic concerts to serene camping, discover what awaits you at Thee Mine.
+            </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+
+          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
             {[
-              products[0], // Hoodie
-              products[9], // Drinkware 1
-              products[4], // T-Shirt
-              products[10], // Drinkware 2
-              products[2], // Hoodie
-              products[5], // T-Shirt (Large)
-              products[11], // Drinkware 3
-              products[1], // Hoodie
-            ].map((product, i) => (
-              <div 
-                key={i} 
-                className={`relative rounded-2xl overflow-hidden group ${
-                  i === 5 ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1'
-                }`}
-              >
+              "Music livebanner.png",
+              "campinginforces.png",
+              "camps2.png",
+              "concertofsinger.png",
+              "image copy 10.png",
+              "image copy 11.png",
+              "image copy 12.png",
+              "image copy 8.png",
+              "image copy.png",
+              "image.png",
+              "nightcampshine.png",
+              "railwaytrack.png"
+            ].map((img, i) => (
+              <div key={i} className="break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer hover-lift">
                 <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                  src={`/images/concerts/${img}`} 
+                  alt="Thee Mine Event"
+                  className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <p className="text-white font-semibold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    {product.category}
-                  </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 via-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <span className="text-white font-medium text-lg block">Captured Moment</span>
+                    <span className="text-purple-300 text-sm">Thee Mine Amphitheater</span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -385,7 +392,7 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden aspect-video">
-                <img src="/images/Editorial_lifestyle_photography_202602170121.jpeg" alt="Thee Mine History" className="w-full h-full object-cover" />
+                <img src="/images/concerts/railwaytrack.png" alt="Thee Mine History" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-900/40 to-transparent" />
               </div>
               <div className="absolute -top-4 -right-4 bg-background border border-purple-500/30 text-white p-4 rounded-xl">
@@ -425,26 +432,44 @@ function App() {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-card border border-border rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover-lift">
-            <div className="w-14 h-14 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6">
-              <Star className="w-7 h-7 text-purple-500" />
+          <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 hover-lift group">
+            <div className="h-48 overflow-hidden relative">
+              <img src="/images/concerts/image.png" alt="Lush Forests" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">Lush Forests</h3>
-            <p className="text-gray-400">Enveloped by lush forests and rolling grassy meadows that concertgoers can freely explore.</p>
+            <div className="p-8 pt-0 relative z-10 -mt-6">
+              <div className="w-14 h-14 bg-background border border-border rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-purple-900/20">
+                <Star className="w-7 h-7 text-purple-500" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Lush Forests</h3>
+              <p className="text-gray-400">Enveloped by lush forests and rolling grassy meadows that concertgoers can freely explore.</p>
+            </div>
           </div>
-          <div className="bg-card border border-border rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover-lift">
-            <div className="w-14 h-14 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6">
-              <MapPin className="w-7 h-7 text-purple-500" />
+          <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 hover-lift group">
+            <div className="h-48 overflow-hidden relative">
+              <img src="/images/concerts/campinginforces.png" alt="Camping & Glamping" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">Camping & Glamping</h3>
-            <p className="text-gray-400">Visitors can go camping, glamping or hike the many scenic wooded trails surrounding the amphitheater.</p>
+            <div className="p-8 pt-0 relative z-10 -mt-6">
+              <div className="w-14 h-14 bg-background border border-border rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-purple-900/20">
+                <MapPin className="w-7 h-7 text-purple-500" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Camping & Glamping</h3>
+              <p className="text-gray-400">Visitors can go camping, glamping or hike the many scenic wooded trails surrounding the amphitheater.</p>
+            </div>
           </div>
-          <div className="bg-card border border-border rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover-lift">
-            <div className="w-14 h-14 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6">
-              <Music className="w-7 h-7 text-purple-500" />
+          <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 hover-lift group">
+            <div className="h-48 overflow-hidden relative">
+              <img src="/images/concerts/concertofsinger.png" alt="State-of-the-Art" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">State-of-the-Art</h3>
-            <p className="text-gray-400">From jaw-dropping locale to state-of-the-art sound and lighting equipment.</p>
+            <div className="p-8 pt-0 relative z-10 -mt-6">
+              <div className="w-14 h-14 bg-background border border-border rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-purple-900/20">
+                <Music className="w-7 h-7 text-purple-500" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">State-of-the-Art</h3>
+              <p className="text-gray-400">From jaw-dropping locale to state-of-the-art sound and lighting equipment.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -531,6 +556,7 @@ function App() {
                 <li><a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors">About</a></li>
                 <li><a href="#history" className="text-gray-400 hover:text-purple-400 transition-colors">History</a></li>
                 <li><a href="#experience" className="text-gray-400 hover:text-purple-400 transition-colors">Experience</a></li>
+                <li><a href="#gallery" className="text-gray-400 hover:text-purple-400 transition-colors">Gallery</a></li>
                 <li><button onClick={() => navigateTo('shop')} className="text-gray-400 hover:text-purple-400 transition-colors">Shop</button></li>
               </ul>
             </div>
