@@ -179,6 +179,11 @@ function HomePage() {
               <p className="text-purple-400 font-medium">
                 All of it unfolds beneath a canopy of stars, where the night sky becomes part of the performance.
               </p>
+              <div className="mt-8 pt-6 border-t border-purple-900/30">
+                <p className="text-sm text-gray-500 font-medium">
+                  Created by <a href="https://YourAIExecutive.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">Your AI Executive</a> & <a href="https://Aithical.pro" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">Aithical pro</a>
+                </p>
+              </div>
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <div className="flex items-center gap-2 text-gray-300">
@@ -198,7 +203,7 @@ function HomePage() {
           <div className="order-1 lg:order-2 relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] glow-purple">
               <img 
-                src="/images/Commercial_beverage_photography_202602170026.jpeg" 
+                src="/images/about.png" 
                 alt="Thee Mine Experience"
                 className="w-full h-full object-cover"
               />
@@ -561,6 +566,9 @@ function HomePage() {
           <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
                Thee Mine Amphitheater. All rights reserved.
+            </p>
+            <p className="text-gray-500 text-sm">
+              Created by <a href="https://YourAIExecutive.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Your AI Executive</a> & <a href="https://Aithical.pro" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Aithical pro</a>
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-gray-500 hover:text-purple-400 transition-colors">Privacy Policy</a>
