@@ -364,9 +364,9 @@ function App() {
                 All of it unfolds beneath a canopy of stars, where the night sky becomes part of the performance.
               </p>
               <div className="mt-8 pt-6 border-t border-purple-900/30">
-                <p className="text-sm text-gray-500 font-medium tracking-wide">
+                {/* <p className="text-sm text-gray-500 font-medium tracking-wide">
                   Created by <a href="https://YourAIExecutive.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">Your AI Executive</a> & <a href="https://Aithical.pro" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">Aithical pro</a>
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
