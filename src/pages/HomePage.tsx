@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { 
-  ShoppingBag, Menu, ArrowRight, Mail, Instagram, Twitter, Facebook, 
+import {
+  ShoppingBag, Menu, ArrowRight, Mail, Instagram, Twitter, Facebook,
   Music, TreePine, Star, MapPin, VolumeX, Volume2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -43,16 +43,15 @@ function HomePage() {
       </div>
 
       {/* Navigation */}
-      <nav className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
+      <nav className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <a href="/" className="flex items-center space-x-2">
-              <img 
-                src="/images/asad.PNG" 
-                alt="Thee Mine" 
+              <img
+                src="/images/asad.PNG"
+                alt="Thee Mine"
                 className="h-10 w-auto"
               />
               <span className="text-xl font-bold text-white hidden sm:block">thee Mine</span>
@@ -101,9 +100,9 @@ function HomePage() {
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/images/Concert_photography_from_202602180029.jpeg" 
-            alt="Thee Mine Amphitheater" 
+          <img
+            src="/images/Concert_photography_from_202602180029.jpeg"
+            alt="Thee Mine Amphitheater"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
@@ -113,7 +112,7 @@ function HomePage() {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <Badge className="mb-6 bg-purple-600/80 text-white border-0 px-6 py-2 text-sm font-semibold tracking-wider">
-            COMING SOON 
+            COMING SOON
           </Badge>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
             THEE MINE <span className="text-gradient">ROCKS</span>
@@ -125,16 +124,16 @@ function HomePage() {
             4th Quarter  - Where Nature and Sound Meet in Perfect Harmony
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg font-semibold animate-pulse-glow"
               onClick={() => scrollToSection('about')}
             >
               Explore Thee Mine <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-purple-500 text-purple-400 hover:bg-purple-600 hover:text-white px-8 py-6 text-lg"
               onClick={() => scrollToSection('contact')}
             >
@@ -151,7 +150,7 @@ function HomePage() {
         </div>
       </section>
 
-  
+
 
       {/* About Section - Step Into the Wonder */}
       <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -165,15 +164,15 @@ function HomePage() {
             </h2>
             <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
               <p>
-                Journey into an enchanted twilight realm, where ancient oaks crown rolling hills 
+                Journey into an enchanted twilight realm, where ancient oaks crown rolling hills
                 and golden light spills across the land.
               </p>
               <p>
-                Welcome to <strong className="text-white">Thee Mine Amphitheater</strong>—a breathtaking 
+                Welcome to <strong className="text-white">Thee Mine Amphitheater</strong>—a breathtaking
                 outdoor sanctuary carved by time and touched by magic.
               </p>
               <p>
-                As the Florida sun sets in a blaze of gold, the stage awakens—hosting world-renowned 
+                As the Florida sun sets in a blaze of gold, the stage awakens—hosting world-renowned
                 musical artists and unforgettable food and wine celebrations.
               </p>
               <p className="text-purple-400 font-medium">
@@ -202,8 +201,8 @@ function HomePage() {
           </div>
           <div className="order-1 lg:order-2 relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] glow-purple">
-              <img 
-                src="/images/about.png" 
+              <img
+                src="/images/about.png"
                 alt="Thee Mine Experience"
                 className="w-full h-full object-cover"
               />
@@ -232,8 +231,8 @@ function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden aspect-video">
-                <img 
-                  src="/images/Editorial_lifestyle_photography_202602170121.jpeg" 
+                <img
+                  src="/images/Editorial_lifestyle_photography_202602170121.jpeg"
                   alt="Thee Mine History"
                   className="w-full h-full object-cover"
                 />
@@ -247,28 +246,28 @@ function HomePage() {
 
             <div className="space-y-6">
               <p className="text-gray-400 text-lg leading-relaxed">
-                Once a phosphate mine carved into Florida's heartland in the early 1900s, 
-                this sacred ground has been transformed by nature and time. For 125 years, 
+                Once a phosphate mine carved into Florida's heartland in the early 1900s,
+                this sacred ground has been transformed by nature and time. For 125 years,
                 God has shaped it—layer by layer—into something extraordinary.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Now, beneath the canopy of towering <strong className="text-white">80-foot oak trees</strong>, 
-                Thee Mine rises again—this time as a 28,000-seat open-air amphitheater. 
-                Surrounded by living witnesses to history, you'll feel the echoes of the past 
+                Now, beneath the canopy of towering <strong className="text-white">80-foot oak trees</strong>,
+                Thee Mine rises again—this time as a 28,000-seat open-air amphitheater.
+                Surrounded by living witnesses to history, you'll feel the echoes of the past
                 and the pulse of the present.
               </p>
               <div className="bg-purple-900/20 border-l-4 border-purple-500 p-6 rounded-r-xl">
                 <p className="text-white text-xl font-medium italic">
-                  "This isn't just a concert venue. It's a time portal, where century-old roots 
+                  "This isn't just a concert venue. It's a time portal, where century-old roots
                   anchor you while world-class music lifts you skyward."
                 </p>
               </div>
               <p className="text-gray-400 text-lg leading-relaxed">
-                The crumbling remnants of the old mine form the backdrop, as the world's 
+                The crumbling remnants of the old mine form the backdrop, as the world's
                 biggest bands create unforgettable moments under the stars.
               </p>
               <div className="flex gap-4">
-                <Button 
+                <Button
                   className="bg-purple-600 hover:bg-purple-700 text-white"
                   onClick={() => scrollToSection('contact')}
                 >
@@ -331,7 +330,7 @@ function HomePage() {
 
         <div className="mt-16 text-center">
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            <strong className="text-white">Thee Mine</strong> has been exquisitely designed to provide music fans 
+            <strong className="text-white">Thee Mine</strong> has been exquisitely designed to provide music fans
             with a one-of-a-kind outdoor festival and concert experience they'll never forget.
           </p>
         </div>
@@ -368,8 +367,8 @@ function HomePage() {
               "railwaytrack.png"
             ].map((img, i) => (
               <div key={i} className="break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer hover-lift">
-                <img 
-                  src={`/images/concerts/${img}`} 
+                <img
+                  src={`/images/concerts/${img}`}
                   alt="Thee Mine Event"
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
@@ -421,21 +420,21 @@ function HomePage() {
             Wear the <span className="text-gradient">Experience</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Show your love for Thee Mine with our exclusive collection of apparel and accessories. 
+            Show your love for Thee Mine with our exclusive collection of apparel and accessories.
             From hoodies to drinkware, represent the music wherever you go.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/shop">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-6 text-lg font-semibold animate-pulse-glow"
               >
                 Shop Now <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </a>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-white/30 text-white hover:bg-white/10 px-10 py-6 text-lg"
               onClick={() => scrollToSection('contact')}
             >
@@ -444,17 +443,17 @@ function HomePage() {
           </div>
 
           {/* Quick Shop Preview */}
-          <div className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto px-4 sm:px-0">
             <div className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-purple-400">Hoodies</div>
+              <div className="text-xl sm:text-2xl font-bold text-purple-400">Hoodies</div>
               <div className="text-sm text-gray-400">From $89</div>
             </div>
             <div className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-purple-400">T-Shirts</div>
+              <div className="text-xl sm:text-2xl font-bold text-purple-400">T-Shirts</div>
               <div className="text-sm text-gray-400">From $42</div>
             </div>
             <div className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-purple-400">Drinkware</div>
+              <div className="text-xl sm:text-2xl font-bold text-purple-400">Drinkware</div>
               <div className="text-sm text-gray-400">From $25</div>
             </div>
           </div>
@@ -472,8 +471,8 @@ function HomePage() {
             Get news and exclusive access to presales when we announce our upcoming calendar of events.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
+            <input
+              type="email"
               placeholder="Enter your email"
               className="flex-1 px-6 py-4 bg-background border border-border rounded-lg text-white placeholder:text-gray-500 focus:outline-none focus:border-purple-500"
             />
@@ -506,13 +505,13 @@ function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Brand */}
             <div>
-              <img 
-                src="/images/asad.PNG" 
-                alt="Thee Mine" 
+              <img
+                src="/images/asad.PNG"
+                alt="Thee Mine"
                 className="h-12 w-auto mb-4"
               />
               <p className="text-gray-400 mb-6">
-                Where nature and sound meet in perfect harmony. 
+                Where nature and sound meet in perfect harmony.
                 Experience unforgettable concerts under the stars.
               </p>
               <div className="flex gap-4">
@@ -565,7 +564,7 @@ function HomePage() {
           {/* Bottom Bar */}
           <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-               Thee Mine Amphitheater. All rights reserved.
+              Thee Mine Amphitheater. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm">
               Created by <a href="https://YourAIExecutive.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Your AI Executive</a> & <a href="https://Aithical.pro" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Aithical pro</a>

@@ -173,7 +173,7 @@ function App() {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
-    
+
     // Check current page
     const path = window.location.pathname;
     if (path === '/shop') {
@@ -181,12 +181,12 @@ function App() {
     } else {
       setCurrentPage('home');
     }
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const filteredProducts = activeCategory === "All" 
-    ? products 
+  const filteredProducts = activeCategory === "All"
+    ? products
     : products.filter(p => p.category === activeCategory);
 
   const addToCart = () => {
@@ -208,9 +208,8 @@ function App() {
       </div>
 
       {/* Navigation */}
-      <nav className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
+      <nav className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('home'); }} className="flex items-center space-x-2">
@@ -260,13 +259,13 @@ function App() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <Badge className="mb-6 bg-purple-600/80 text-white border-0 px-6 py-2 text-sm font-semibold tracking-wider">
-            COMING SOON 
+            COMING SOON
           </Badge>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
             THEE MINE <span className="text-gradient">ROCKS</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto font-light">
-           op Get Ready for Epic Concerts and Events at Thee Mine Amphitheater
+            op Get Ready for Epic Concerts and Events at Thee Mine Amphitheater
           </p>
           <p className="text-lg text-purple-400 mb-8 max-w-2xl mx-auto">
             4th Quarter  - Where Nature and Sound Meet in Perfect Harmony
@@ -318,8 +317,8 @@ function App() {
               "railwaytrack.png"
             ].map((img, i) => (
               <div key={i} className="break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer hover-lift">
-                <img 
-                  src={`/images/concerts/${img}`} 
+                <img
+                  src={`/images/concerts/${img}`}
                   alt="Thee Mine Event"
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
@@ -349,15 +348,15 @@ function App() {
             </h2>
             <div className="space-y-4 text-gray-400 text-lg leading-relaxed">
               <p>
-                Journey into an enchanted twilight realm, where ancient oaks crown rolling hills 
+                Journey into an enchanted twilight realm, where ancient oaks crown rolling hills
                 and golden light spills across the land.
               </p>
               <p>
-                Welcome to <strong className="text-white">Thee Mine Amphitheater</strong>—a breathtaking 
+                Welcome to <strong className="text-white">Thee Mine Amphitheater</strong>—a breathtaking
                 outdoor sanctuary carved by time and touched by magic.
               </p>
               <p>
-                As the Florida sun sets in a blaze of gold, the stage awakens—hosting world-renowned 
+                As the Florida sun sets in a blaze of gold, the stage awakens—hosting world-renowned
                 musical artists and unforgettable food and wine celebrations.
               </p>
               <p className="text-purple-400 font-medium">
@@ -407,17 +406,17 @@ function App() {
             </div>
             <div className="space-y-6">
               <p className="text-gray-400 text-lg leading-relaxed">
-                Once a phosphate mine carved into Florida's heartland in the early 1900s, 
-                this sacred ground has been transformed by nature and time. For 125 years, 
+                Once a phosphate mine carved into Florida's heartland in the early 1900s,
+                this sacred ground has been transformed by nature and time. For 125 years,
                 God has shaped it—layer by layer—into something extraordinary.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Now, beneath the canopy of towering <strong className="text-white">80-foot oak trees</strong>, 
+                Now, beneath the canopy of towering <strong className="text-white">80-foot oak trees</strong>,
                 Thee Mine rises again—this time as a 28,000-seat open-air amphitheater.
               </p>
               <div className="bg-purple-900/20 border-l-4 border-purple-500 p-6 rounded-r-xl">
                 <p className="text-white text-xl font-medium italic">
-                  "This isn't just a concert venue. It's a time portal, where century-old roots 
+                  "This isn't just a concert venue. It's a time portal, where century-old roots
                   anchor you while world-class music lifts you skyward."
                 </p>
               </div>
@@ -503,17 +502,17 @@ function App() {
               Shop Now <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
-          <div className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto px-4 sm:px-0">
             <div className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-purple-400">Hoodies</div>
+              <div className="text-xl sm:text-2xl font-bold text-purple-400">Hoodies</div>
               <div className="text-sm text-gray-400">From $89</div>
             </div>
             <div className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-purple-400">T-Shirts</div>
+              <div className="text-xl sm:text-2xl font-bold text-purple-400">T-Shirts</div>
               <div className="text-sm text-gray-400">From $42</div>
             </div>
             <div className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center">
-              <div className="text-2xl font-bold text-purple-400">Drinkware</div>
+              <div className="text-xl sm:text-2xl font-bold text-purple-400">Drinkware</div>
               <div className="text-sm text-gray-400">From $25</div>
             </div>
           </div>
@@ -606,9 +605,8 @@ function App() {
       </div>
 
       {/* Navigation */}
-      <nav className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
+      <nav className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <button onClick={() => navigateTo('home')} className="flex items-center space-x-2">
@@ -665,7 +663,7 @@ function App() {
             Wear the <span className="text-gradient">Experience</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Official merchandise from the hottest concert events in your area. 
+            Official merchandise from the hottest concert events in your area.
             Premium quality apparel and accessories for true music lovers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -737,9 +735,8 @@ function App() {
         </div>
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
-            <button key={category} onClick={() => setActiveCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-              activeCategory === category ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/30' : 'bg-secondary text-gray-300 hover:bg-muted hover:text-white'
-            }`}>
+            <button key={category} onClick={() => setActiveCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeCategory === category ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/30' : 'bg-secondary text-gray-300 hover:bg-muted hover:text-white'
+              }`}>
               {category}
             </button>
           ))}
@@ -785,8 +782,8 @@ function App() {
               Born from the <span className="text-gradient">Music</span>
             </h2>
             <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-              Thee Mine is more than just merchandise – it's a celebration of live music culture. 
-              Born from the energy of concert events in our local scene, we create premium apparel 
+              Thee Mine is more than just merchandise – it's a celebration of live music culture.
+              Born from the energy of concert events in our local scene, we create premium apparel
               and accessories that let you carry the concert experience wherever you go.
             </p>
             <div className="mt-6 pt-6 border-t border-purple-900/30 mb-8">
